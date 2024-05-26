@@ -10,6 +10,7 @@ This WordPress solution enhances the user experience of forms submitted within E
 *   **Customizable:** Easily tailor the appearance of the loading overlay to match your website's design.
 
 ## Installation and Usage
+Before start the steps add an `html` field to the button of your desigend form with JetFormBuilder
 
 1.  **HTML:** Add the following HTML snippets to your Elementor popup:
     *   **Loading Overlay (inside the popup):**
