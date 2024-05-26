@@ -1,0 +1,71 @@
+.loading-overlay {
+    position: fixed;  /* Cover the entire viewport */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 1); /* Increased opacity to 0.8 */
+    z-index: 9999;    /* Ensure it's on top */
+    display: flex;    /* Center the spinner */
+    align-items: center;
+    justify-content: center;
+	  pointer-events: none; 
+	 z-index: 100001; 
+}
+
+.spinner {
+    border: 4px solid rgba(0, 0, 0, 0.1); /* Light grey outer border */
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border-top-color: #3498db; /* Blue top border */
+    animation: spin 1s linear infinite; /* Animation */
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+	.loading-text {
+    color: white;
+    margin-top: 10px; /* Adjust as needed */
+    text-align: center;
+}
+
+	#disable-interactions-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9998; /* One less than .loading-overlay */
+    background-color: transparent;
+    pointer-events: none; 
+}
+	/* ... (Your existing .loading-overlay and #disable-interactions-overlay styles) ... */
+
+.loading-overlay .loading-content {
+    background: linear-gradient(to bottom right, #f0f0f0, #e0e0e0); /* White-gray gradient */
+    padding: 20px; /* Adjust padding as needed */
+    border-radius: 8px; /* Optional rounded corners */
+    text-align: center;  
+    width: 80%; /* 10% padding on each side */
+	  display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center;   /* Center items horizontally */
+}
+
+
+.loading-overlay .spinner {
+    width: 72px; /* Double the size */
+    height: 72px;
+    margin-bottom: 15px; /* Add space between spinner and text */
+    /* ... (Your existing spinner styles) ... */
+}
+
+.loading-overlay .loading-text {
+    font-size: 18px; /* Larger font size */
+    line-height: 1.4; /* Adjust line height as needed */
+	  font-weight: bold; /* Make the text bold */
+    color: black;     /* Pure black text */
+}
